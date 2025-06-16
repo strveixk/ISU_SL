@@ -132,7 +132,7 @@ public class Main {
                             for (int i = 0; i < matches.size(); i++) {
                                 int idx = matches.get(i);
                                 String status = serviceAvailable.get(idx) ? "" : "(Fully Booked)";
-                                System.out.print(String.format("%d. %s - $%.2f/hr %s%n", (i + 1), serviceNames.get(idx), serviceRates.get(idx), status));
+                                System.out.print(String.format("%d. %s - $%.2f/hr %s\n", (i + 1), serviceNames.get(idx), serviceRates.get(idx), status));
                             }
 
 
@@ -178,9 +178,9 @@ public class Main {
                     double hours = cartHours.get(i);
                     double subtotal = serviceRates.get(idx) * hours;
                     total += subtotal;
-                    System.out.print(String.format("%d. %s - $%.2f/hr x %.1f hrs = $%.2f%n", (i + 1), serviceNames.get(idx), serviceRates.get(idx), hours, subtotal));
+                    System.out.print(String.format("%d. %s - $%.2f/hr x %.1f hrs = $%.2f\n", (i + 1), serviceNames.get(idx), serviceRates.get(idx), hours, subtotal));
                 }
-                System.out.print(String.format("Total: $%.2f%n", total));
+                System.out.print(String.format("Total: $%.2f\n", total));
 
                 if (cart.size() > 0) { // This section prompts the user if they want to remove a service from the cart, only if they have 1+ service
                     System.out.print("Do you want to remove a service? (y/n): ");
@@ -211,9 +211,9 @@ public class Main {
                     double hours = cartHours.get(i);
                     double subtotal = serviceRates.get(idx) * hours;
                     total += subtotal;
-                    System.out.print(String.format("%d. %s - $%.2f/hr x %.1f hrs = $%.2f%n", (i + 1), serviceNames.get(idx), serviceRates.get(idx), hours, subtotal));
+                    System.out.print(String.format("%d. %s - $%.2f/hr x %.1f hrs = $%.2f\n", (i + 1), serviceNames.get(idx), serviceRates.get(idx), hours, subtotal));
                 }
-                System.out.print(String.format("Total Amount Due: $%.2f%n", total));
+                System.out.print(String.format("Total Amount Due: $%.2f\n", total));
                 System.out.println("Thank you for booking!");
 
 
